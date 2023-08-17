@@ -22,7 +22,7 @@
       become: true
 
 - name: Setup k3s servers
-  hosts: controller
+  hosts: master
   roles:
     - role: k3s_server
       become: true
@@ -34,7 +34,7 @@
       become: true
 
 - name: Configure k3s cluster
-  hosts: controller
+  hosts: master
   roles:
     - role: k3s_server_post
       become: true
